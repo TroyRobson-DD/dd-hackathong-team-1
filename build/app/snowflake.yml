@@ -1,0 +1,23 @@
+definition_version: 2
+entities:
+  expense_claims_app:
+    type: streamlit
+    identifier:
+      name: EXPENSE_CLAIMS_APP
+      database: EXPENSE_APP
+      schema: CLAIMS
+    query_warehouse: COMPUTE_WH
+    runtime_name: SYSTEM$ST_CONTAINER_RUNTIME_PY3_11
+    compute_pool: SYSTEM_COMPUTE_POOL_CPU
+    main_file: streamlit_app.py
+    artifacts:
+      - streamlit_app.py
+      - pages/1_Submit_Claim.py
+      - pages/2_My_Claims.py
+      - pages/3_Approval_Queue.py
+      - pages/4_Finance_Dashboard.py
+      - pages/5_Admin.py
+      - utils/__init__.py
+      - utils/auth.py
+      - utils/db.py
+      - utils/formatting.py
